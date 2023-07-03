@@ -16,4 +16,4 @@ jobs:
         uses: AndreasAugustin/actions-template-sync@v1.0.0-draft
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          source_repo_path: https://github.com/ratfactor/ziglings.git
+          source_repo_path: https://github.com/ratfactor/ziglings
