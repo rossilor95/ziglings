@@ -6,12 +6,14 @@ on:
       - main
 
 jobs:
-  template-sync:
+  repo-sync:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2 # important!
-      - uses: ahmadnassri/action-template-repository-sync@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: actions-template-sync
+        uses: AndreasAugustin/actions-template-sync@v1.0.0-draft
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          dry-run: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          source_repo_path: https://github.com/ratfactor/ziglings.git
